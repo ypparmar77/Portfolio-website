@@ -1,0 +1,563 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "M PLUS 1p", sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 17px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(rgba(255, 0, 0, 0.742), black);
+    border-radius: 10px;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: black;
+}
+
+
+
+.nav-link {
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: red !important;
+    transform: scale(1.1);
+}
+
+.scroll-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 490px;
+    height: auto;
+    display: flex;
+    white-space: nowrap;
+    font-size: 17px;
+}
+
+.scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: rgba(43, 9, 16, 0.53);
+    border-radius: 5px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 5px;
+}
+
+.scroll-item {
+    display: inline-block;
+    padding: 40px 60px;
+    margin: 5px;
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+    flex-shrink: 0;
+    transition: 0.5s;
+}
+
+.scroll-item:hover {
+    background-color: brown;
+    transform: translateY(-5px);
+
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background: white;
+    cursor: pointer;
+}
+
+#hov a {
+    transition: 0.5s;
+}
+
+#hov a:hover {
+    background-color: brown !important;
+    border-radius: 5px;
+    transform: translateY(-5px);
+
+}
+
+.imgwork {
+    background-image: url(s.1.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.imgwork .textwork {
+    margin-top: 7%;
+    margin-left: 9%;
+    position: absolute;
+    z-index: 2;
+}
+
+.imgwork::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    /* Add a dark overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+@media (max-width: 700px) {
+    .imgwork {
+        text-align: center;
+    }
+
+    .imgwork .textwork p,
+    .imgwork .textwork i {
+        font-size: 25px;
+    }
+
+    .imgwork #work {
+        margin-left: 150px;
+    }
+
+    .textwork h1 {
+        font-size: 80px !important;
+        margin-left: 50px;
+
+    }
+
+    .textwork .scroll-container {
+        font-size: 15px;
+        width: 480px;
+        margin-left: 40px;
+    }
+
+    .textwork #hov {
+        margin-left: 0px;
+    }
+}
+
+/* @media only screen and (max-width: 579px) {
+
+    .imgwork .textwork {
+        text-align: center;
+    }
+
+    .imgwork .textwork p,
+    .imgwork .textwork i {
+        font-size: 22px;
+    }
+
+    .imgwork #work {
+        margin-left: 100px;
+    }
+
+    .textwork h1 {
+        font-size: 70px !important;
+        margin-left: 40px;
+
+    }
+
+    .textwork .scroll-container {
+        font-size: 15px;
+        width: 320px;
+        margin-left: 40px;
+    }
+
+    .textwork #hov {
+        margin-left: 50px;
+    }
+} */
+
+#sta {
+    text-align: center;
+    font-size: 50px;
+    animation-name: yp;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 110%;
+    transform: translate(-50%, -50%);
+
+}
+
+@media only screen and (max-width: 320px) {
+
+    .imgwork .textwork {
+        text-align: center;
+        /* background-color: blue; */
+    }
+
+    .imgwork .textwork p,
+    .imgwork .textwork i {
+        font-size: 20px !important;
+
+    }
+
+    .textwork h1 {
+        font-size: 40px !important;
+        margin-left: -5px !important;
+
+    }
+
+    .textwork .scroll-container {
+        font-size: 10px !important;
+        width: 280px !important;
+        margin-left: 0px !important;
+    }
+
+    .btnop {
+        font-size: 15px !important;
+        padding: 10px 30px !important;
+    }
+
+    .last2 {
+        font-size: 15px;
+    }
+
+
+    .bar {
+        flex-direction: column !important;
+    }
+
+    .fro {
+        width: 300px !important;
+        font-size: 10px;
+
+    }
+
+
+
+}
+
+.btnop {
+    font-size: 25px;
+    padding: 15px 60px;
+}
+
+
+@media only screen and (max-width: 486px) {
+
+    .imgwork .textwork {
+        text-align: center;
+        /* background-color: blue; */
+    }
+
+    .imgwork .textwork p,
+    .imgwork .textwork i {
+        font-size: 18px;
+    }
+
+    .imgwork #work {
+        margin-left: 60px;
+
+    }
+
+    .textwork h1 {
+        font-size: 60px !important;
+        margin-left: -4px;
+    }
+
+    .textwork .scroll-container {
+        font-size: 15px;
+        width: 320px;
+        margin-left: 0px;
+    }
+
+    .textwork #hov {
+        margin-left: 0px;
+    }
+
+    #sta {
+        margin-top: -40px;
+    }
+
+
+}
+
+#sta {
+    text-align: center;
+    font-size: 50px;
+    animation-name: yp;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 110%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes yp {
+    50% {
+        margin-top: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 976px) {
+
+    #web h1 {
+        font-size: 80px !important;
+    }
+
+    #web p {
+        font-size: 25px !important;
+        margin-top: 11px !important;
+    }
+
+    #web span {
+        font-size: 15px !important;
+    }
+}
+
+
+@media only screen and (max-width: 579px) {
+
+    #web h1 {
+        font-size: 50px !important;
+    }
+
+    #web p {
+        font-size: 20px !important;
+        margin-top: 0px !important;
+    }
+
+    #web span {
+        font-size: 10px !important;
+    }
+
+    .cadss {
+        height: 120px;
+    }
+
+    .cadss p {
+        font-size: 15px;
+        margin-top: -8px;
+    }
+
+    .cadss h5 {
+        margin-top: -30px;
+    }
+
+    .back {
+        background-image: url(roping.png);
+        background-position: center;
+        background-size: cover;
+        height: 50vh !important;
+    }
+
+}
+
+
+.a1 span i:hover {
+    background-color: rgba(213, 53, 53, 0.731) !important;
+    color: white !important;
+}
+
+
+.c2 span i:hover {
+    background-color: rgba(213, 53, 53, 0.731) !important;
+    color: white !important;
+}
+
+#photo1 {
+    background-image: url(service2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 576px) {
+    .service-box {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    .btnop {
+        font-size: 15px !important;
+        padding: 20px 40px !important;
+    }
+
+    .last2 {
+        font-size: 15px;
+    }
+}
+
+.twork {
+    background-color: black;
+    text-align: center;
+}
+
+.twork p {
+    color: rgba(255, 255, 255, 0.573);
+}
+
+.twork button {
+    padding: 18px 40px;
+    border-radius: 30px;
+    border: 0px;
+    color: black;
+    background-color: white;
+    transition: 0.5 !important;
+}
+
+.bg-hover:hover {
+    background-color: gray;
+    color: white;
+}
+
+.bestim {
+    background-image: url(Screenshot\ 0.1.png);
+    background-position: center;
+    background-size: cover;
+    height: 128vh;
+}
+
+.bestim ul li {
+    list-style-type: none;
+    float: left;
+    color: white;
+}
+
+.bestim ul li a {
+    text-decoration: none;
+}
+
+.bestim ul li h1 {
+    font-size: 20px;
+}
+
+#yash {
+    width: 1200px;
+    top: -5%;
+}
+
+.back {
+    background-image: url(roping.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.bestim {
+    background-image: url( Screenshot\ 0.1.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.pogers {
+    max-width: 800px;
+}
+
+#map {
+    background-image: url(map.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+#map #maptext {
+    background-color: aqua;
+    height: 200px;
+    width: 300px;
+    text-align: center;
+}
+
+
+.ypparmar {
+    background-image: url(girl.pho.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+
+
+
+}
+
+@media screen and (max-width:994px) {
+
+    .ypparmar {
+        height: 120vh;
+    }
+}
+
+@media screen and (max-width:540px) {
+
+    #disp {
+        flex-direction: column;
+
+    }
+
+    .ypparmar {
+        height: 130vh;
+    }
+}
+
+#colo:hover {
+    color: brown;
+}
+
+#colo {
+    color: white;
+    transition: 0.3s;
+}
+
+
+@media screen and (max-width:900px) {
+
+    .bar {
+        flex-direction: column !important;
+    }
+
+    .fro {
+        width: 370px;
+    }
+
+}
+
+form {
+    display: flex;
+}
+
+form #email {
+    outline: none;
+    padding: 15px 30px;
+    width: 350px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: rgba(255, 255, 255, 0.74);
+}
+
+form #submit {
+    padding: 5px 40px;
+    margin-left: -50px;
+    border-radius: 5px;
+    border: 0px;
+}
+
+form #submit:hover {
+    background-color: rgb(214, 17, 17) !important;
+}
+
+.lastman {
+    background-image: url(the\ last\ phto.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
